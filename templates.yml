@@ -1,27 +1,42 @@
-type: 1
-title: Vault-dev
-name: vault
-description: 'Manage secrets and protect sensitive data. Create and secure access to tokens, passwords, certificates, and encryption keys.'
-logo: 'https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/Vault_PrimaryLogo_White_RGB.png'
-image: vault
-categories:
-  - Security
-  - Secrets Manager
-platform: linux
-restart_policy: unless-stopped
-ports:
-  - '8200:8200/tcp'
-volumes:
-  - container: /config
-    bind: !config/vault
-cap_add:
-  - IPC_LOCK
-env:
-  - name: VAULT_DEV_ROOT_TOKEN_ID
-    label: VAULT_DEV_ROOT_TOKEN_ID
-    description: This sets the ID of the initial generated root token to the given value
-    default: 'myroot'
-  - name: VAULT_DEV_LISTEN_ADDRESS
-    label: VAULT_DEV_LISTEN_ADDRESS
-    description: This sets the IP:port of the development server listener (defaults to 0.0.0.0:8200)
-    default: '0.0.0.0:8200'
+{
+    "type": 1,
+    "title": "Vault",
+    "name": "dev-vault",
+    "description": "Manage secrets and protect sensitive data. Create and secure access to tokens, passwords, certificates, and encryption keys.",
+    "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/Vault_PrimaryLogo_White_RGB.png",
+    "image": "vault",
+    "categories": [
+        "Security",
+        "Secrets Manager"
+    ],
+    "platform": "linux",
+    "restart_policy": "unless-stopped",
+    "ports": [
+        {
+            "http": "8200:8200/tcp"
+        }
+    ],
+    "volumes": [
+        {
+        "container": "/config",
+        "bind": "!config/Vault"
+        }
+    ],
+    "cap_add": [
+        "IPC_LOCK"
+    ],
+    "env": [
+        {
+            "name": "VAULT_DEV_ROOT_TOKEN_ID",
+            "label": "VAULT_DEV_ROOT_TOKEN_ID",
+            "description": "This sets the ID of the initial generated root token to the given value",
+            "default": "myroot"
+        },
+        {
+            "name": "VAULT_DEV_LISTEN_ADDRESS",
+            "label": "VAULT_DEV_LISTEN_ADDRESS",
+            "description": "This sets the IP:port of the development server listener (defaults to 0.0.0.0:8200)",
+            "default": "0.0.0.0:8200"
+        }
+    ]
+}
