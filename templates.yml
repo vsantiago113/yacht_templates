@@ -13,7 +13,7 @@
     "restart_policy": "unless-stopped",
     "ports": [
         {
-            "http": "8200:8200/tcp"
+            "WebUI": "8200:8200/tcp"
         }
     ],
     "volumes": [
