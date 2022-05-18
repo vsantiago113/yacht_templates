@@ -1,5 +1,5 @@
 type: 1
-title: Vault
+title: Vault-dev
 name: vault
 description: Manage secrets and protect sensitive data. Create and secure access to tokens, passwords, certificates, and encryption keys.
 logo: https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/Vault_PrimaryLogo_White_RGB.png
