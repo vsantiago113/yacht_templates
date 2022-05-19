@@ -122,10 +122,8 @@
             "bind": "!config/portainer/data"
             }
         ],
-        {
-            "cap_add": [
-                "ALL"
-            ],
-        }
+        "cap_add": [
+            "ALL"
+        ]
     }
 ]
