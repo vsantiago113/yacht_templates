@@ -87,6 +87,40 @@
                 "description": "This runs a Vault server using the file storage backend at path /vault/file, with a default secret lease duration of one week and a maximum of 30 days.",
                 "default": "{\"listener\": {\"tcp\": {\"address\": \"0.0.0.0:8200\", \"tls_disable\": 1}}, \"backend\": {\"file\": {\"path\": \"/vault/file\"}}, \"api_addr\": \"http://0.0.0.0:8200\", \"ui\": true, \"disable_mlock\": true, \"disable_cache\": true, \"default_lease_ttl\": \"168h\", \"max_lease_ttl\": \"720h\"}"
             }
+        ],
+        "command": [
+            "server"
+        ]
+    },
+    {
+        "type": 1,
+        "title": "Portainer CE",
+        "name": "portainer",
+        "description": "Portainer is a centralized multi-cluster container management platform. With an intuitive UI, codified best practices, and cloud-native design templates, Portainer reduces the operational complexity of multi-cluster container management.",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/portainer_logo_alt.png",
+        "image": "portainer/portainer-ce:2.11.1",
+        "categories": [
+            "Container Management"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "WebUI-HTTP": "8000:8000/tcp"
+            },
+            {
+                "WebUI-HTTPS": "9443:9443/tcp"
+            }
+        ],
+        "volumes": [
+            {
+            "container": "/var/run/docker.sock",
+            "bind": "/var/run/docker.sock"
+            },
+            {
+            "container": "/data",
+            "bind": "!config/portainer/data"
+            }
         ]
     }
 ]
