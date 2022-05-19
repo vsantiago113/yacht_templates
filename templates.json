@@ -183,7 +183,7 @@
                 "name": "GITLAB_OMNIBUS_CONFIG",
                 "label": "GITLAB_OMNIBUS_CONFIG",
                 "description": "You can pre-configure the GitLab Docker image by adding the environment variable GITLAB_OMNIBUS_CONFIG to Docker run command. This variable can contain any gitlab.rb setting and is evaluated before the loading of the container's gitlab.rb file.",
-                "default": "gitlab_rails['gitlab_shell_ssh_port'] = 2224"
+                "default": "gitlab_rails['gitlab_shell_ssh_port'] = 2224; gitlab_rails['initial_root_password'] = 'MySuperSecretAndSecurePass0rd!'"
             }
         ]
     }
