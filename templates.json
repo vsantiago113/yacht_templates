@@ -140,8 +140,11 @@
         "volumes": [
             {
                 "container": "/var/jenkins_home",
-                "bind": "jenkins_home"
+                "bind": "!data/jenkins_home"
             }
+        ],
+        "cap_add": [
+            "SETFCAP"
         ]
     }
 ]
