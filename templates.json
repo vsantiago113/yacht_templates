@@ -143,5 +143,48 @@
                 "bind": "jenkins_home"
             }
         ]
+    },
+    {
+        "type": 1,
+        "title": "Gitlab CE",
+        "name": "gitlab",
+        "description": "GitLab helps you automate the builds, integration, and verification of your code. With SAST, DAST, code quality analysis, plus pipelines that enable concurrent testing and parallel execution, your teams get quick insights about every commit so they can deliver higher quality code faster.",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/gitlab-logo-100.png",
+        "image": "gitlab/gitlab-ce:latest",
+        "categories": [
+            "Git",
+            "Source Control"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "WebUI-HTTP": "8880:80/tcp",
+                "WebUI-HTTPS": "4443:443/tcp",
+                "SSH": "2224:22/tcp"
+            }
+        ],
+        "volumes": [
+            {
+                "container": "/etc/gitlab",
+                "bind": "!config/gitlab/config"
+            },
+            {
+                "container": "/var/log/gitlab",
+                "bind": "!logs/gitlab/logs"
+            },
+            {
+                "container": "/var/opt/gitlab",
+                "bind": "!data/gitlab/data"
+            }
+        ],
+        "env": [
+            {
+                "name": "GITLAB_OMNIBUS_CONFIG",
+                "label": "GITLAB_OMNIBUS_CONFIG",
+                "description": "You can pre-configure the GitLab Docker image by adding the environment variable GITLAB_OMNIBUS_CONFIG to Docker run command. This variable can contain any gitlab.rb setting and is evaluated before the loading of the container's gitlab.rb file.",
+                "default": "gitlab_rails['gitlab_shell_ssh_port'] = 2224"
+            }
+        ]
     }
 ]
