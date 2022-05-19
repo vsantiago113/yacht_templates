@@ -7,7 +7,6 @@
         "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/Vault_PrimaryLogo_White_RGB.png",
         "image": "vault",
         "categories": [
-            "Security",
             "Secrets Manager"
         ],
         "platform": "linux",
@@ -49,7 +48,6 @@
         "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/Vault_PrimaryLogo_White_RGB.png",
         "image": "vault",
         "categories": [
-            "Security",
             "Secrets Manager"
         ],
         "platform": "linux",
@@ -118,6 +116,32 @@
         ],
         "cap_add": [
             "ALL"
+        ]
+    },
+    {
+        "type": 1,
+        "title": "Jenkins",
+        "name": "jenkins",
+        "description": "The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/jenkins.png",
+        "image": "jenkins/jenkins:lts-jdk11",
+        "categories": [
+            "Pipelines",
+            "CI/CD"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "Inbound": "50000:50000/tcp",
+                "WebUI": "8080:8080/tcp"
+            }
+        ],
+        "volumes": [
+            {
+                "container": "/var/jenkins_home",
+                "bind": "!data/jenkins_home"
+            }
         ]
     }
 ]
