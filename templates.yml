@@ -121,6 +121,11 @@
             "container": "/data",
             "bind": "!config/portainer/data"
             }
-        ]
+        ],
+        {
+            "cap_add": [
+                "ALL"
+            ],
+        }
     }
 ]
