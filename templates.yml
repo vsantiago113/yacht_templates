@@ -106,9 +106,7 @@
         "restart_policy": "unless-stopped",
         "ports": [
             {
-                "WebUI-HTTP": "8000:8000/tcp"
-            },
-            {
+                "WebUI-HTTP": "8000:8000/tcp",
                 "WebUI-HTTPS": "9443:9443/tcp"
             }
         ],
