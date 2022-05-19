@@ -19,8 +19,8 @@
         ],
         "volumes": [
             {
-            "container": "/config",
-            "bind": "!config/vault"
+                "container": "/config",
+                "bind": "!config/vault"
             }
         ],
         "cap_add": [
@@ -61,20 +61,16 @@
         ],
         "volumes": [
             {
-            "container": "/vault",
-            "bind": "!config/vault"
+                "container": "/vault/config",
+                "bind": "!config/vault/config"
             },
             {
-            "container": "/vault/config",
-            "bind": "!config/vault/config"
+                "container": "/vault/file",
+                "bind": "!data/vault/file"
             },
             {
-            "container": "/vault/file",
-            "bind": "!config/vault/file"
-            },
-            {
-            "container": "/vault/logs",
-            "bind": "!config/vault/logs"
+                "container": "/vault/logs",
+                "bind": "!logs/vault/logs"
             }
         ],
         "cap_add": [
@@ -112,12 +108,12 @@
         ],
         "volumes": [
             {
-            "container": "/var/run/docker.sock",
-            "bind": "/var/run/docker.sock"
+                "container": "/var/run/docker.sock",
+                "bind": "/var/run/docker.sock"
             },
             {
-            "container": "/data",
-            "bind": "!config/portainer/data"
+                "container": "/data",
+                "bind": "!data/portainer/data"
             }
         ],
         "cap_add": [
