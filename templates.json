@@ -140,9 +140,21 @@
         "volumes": [
             {
                 "container": "/var/jenkins_home",
-                "bind": "jenkins_home"
+                "bind": "!data/jenkins_home"
             }
-        ]
+        ],
+        "env": [
+            {
+                "name": "PUID",
+                "label": "PUID",
+                "default": "!PUID"
+            },
+            {
+                "name": "PGID",
+                "label": "PGID",
+                "default": "!PGID"
+            }
+          ]
     },
     {
         "type": 1,
@@ -260,5 +272,48 @@
                 "default": "MySuperSecretAndSecureP@ssw0rd"
             }
         ]
+    },
+    {
+        "type": 1,
+        "title": "HEIMDALL",
+        "name": "heimdall",
+        "description": "As the name suggests Heimdall Application Dashboard is a dashboard for all your web applications. It doesn't need to be limited to applications though, you can add links to anything you like.",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/heimdall-logo.png",
+        "image": "lscr.io/linuxserver/heimdall:latest",
+        "categories": [
+            "Dashboard"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "WebUI-HTTP": "80:80/tcp",
+                "WebUI-HTTPS": "443:443/tcp"
+            }
+        ],
+        "volumes": [
+            {
+                "container": "/config",
+                "bind": "!config/heimdall"
+            }
+        ],
+        "env": [
+            {
+                "name": "PUID",
+                "label": "PUID",
+                "default": "!PUID"
+            },
+            {
+                "name": "PGID",
+                "label": "PGID",
+                "default": "!PGID"
+            },
+            {
+                "name": "TZ",
+                "label": "TZ",
+                "description": "Time zone",
+                "default": "America/Chicago"
+            }
+          ]
     }
 ]

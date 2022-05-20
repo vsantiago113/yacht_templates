@@ -20,3 +20,11 @@ Yacht templates of containers I use for IT Automation development, and testing.
 * Pi-hole:
     * Docker Hug: https://hub.docker.com/r/pihole/pihole/
     * Official Website: https://pi-hole.net/
+* HEIMDALL
+    * GitHub: https://github.com/linuxserver/Heimdall
+    * Official Website: https://heimdall.site/
+    * Docker Hub: https://hub.docker.com/r/linuxserver/heimdall/
+* PostgreSQL
+    * Docker Hub: https://hub.docker.com/_/postgres
+* Guacamole
+    * Docker Hub: https://hub.docker.com/r/guacamole/guacamole/
