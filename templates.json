@@ -4,7 +4,7 @@
         "title": "Vault - Development Mode",
         "name": "dev-vault",
         "description": "Manage secrets and protect sensitive data. Create and secure access to tokens, passwords, certificates, and encryption keys.",
-        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/Vault_PrimaryLogo_White_RGB.png",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/vault-logo.png",
         "image": "vault",
         "categories": [
             "Secrets Manager"
@@ -45,7 +45,7 @@
         "title": "Vault - Server Mode",
         "name": "vault",
         "description": "Manage secrets and protect sensitive data. Create and secure access to tokens, passwords, certificates, and encryption keys.",
-        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/Vault_PrimaryLogo_White_RGB.png",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/vault-logo.png",
         "image": "vault",
         "categories": [
             "Secrets Manager"
@@ -91,7 +91,7 @@
         "title": "Portainer CE",
         "name": "portainer",
         "description": "Portainer is a centralized multi-cluster container management platform. With an intuitive UI, codified best practices, and cloud-native design templates, Portainer reduces the operational complexity of multi-cluster container management.",
-        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/portainer_logo_alt.png",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/portainer-logo.png",
         "image": "portainer/portainer-ce:2.11.1",
         "categories": [
             "Container Management"
@@ -123,7 +123,7 @@
         "title": "Jenkins",
         "name": "jenkins",
         "description": "The leading open source automation server, Jenkins provides hundreds of plugins to support building, deploying and automating any project.",
-        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/jenkins.png",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/jenkins-logo.png",
         "image": "jenkins/jenkins:lts-jdk11",
         "categories": [
             "Pipelines",
@@ -149,7 +149,7 @@
         "title": "Gitlab CE",
         "name": "gitlab",
         "description": "GitLab helps you automate the builds, integration, and verification of your code. With SAST, DAST, code quality analysis, plus pipelines that enable concurrent testing and parallel execution, your teams get quick insights about every commit so they can deliver higher quality code faster.",
-        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/gitlab-logo-100.png",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/gitlab-logo.png",
         "image": "gitlab/gitlab-ce:latest",
         "categories": [
             "Git",
@@ -192,7 +192,7 @@
         "title": "Docker Registry",
         "name": "docker_registry",
         "description": "The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images. The Registry is open-source, under the permissive Apache license.",
-        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/docker_registry_logo.png",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/docker_registry-logo.png",
         "image": "registry:2",
         "categories": [
             "Registry"
