@@ -17,5 +17,6 @@ Yacht templates of containers I use for IT Automation development, and testing.
 * Docker Registry
     * Official Website: https://docs.docker.com/registry/
     * Docker Hub: https://hub.docker.com/_/registry
-* Ubuntu
-    * Docker Hub: https://hub.docker.com/_/ubuntu
+* Pi-hole:
+    * Docker Hug: https://hub.docker.com/r/pihole/pihole/
+    * Official Website: https://pi-hole.net/

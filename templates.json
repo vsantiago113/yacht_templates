@@ -210,5 +210,55 @@
                 "bind": "!data/docker_registry"
             }
         ]
+    },
+    {
+        "type": 1,
+        "title": "Pi-hole",
+        "name": "pihole",
+        "description": "",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/pihole-logo.png",
+        "image": "pihole/pihole:latest",
+        "categories": [
+            "DNS",
+            "DHCP",
+            "Ads Block"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "DNS-TCP": "53:53/tcp",
+                "DNS-UDP": "53:53/udp",
+                "DHCP": "67:67/udp",
+                "WebUI": ":80/tcp"
+            }
+        ],
+        "volumes": [
+            {
+                "container": "/etc/pihole",
+                "bind": "!config/pihole/etc-pihole"
+            },
+            {
+                "container": "/etc/dnsmasq.d",
+                "bind": "!config/pihole/etc-dnsmasq.d"
+            }
+        ],
+        "cap_add": [
+            "NET_ADMIN"
+        ],
+        "env": [
+            {
+                "name": "TZ",
+                "label": "TZ",
+                "description": "Time zone",
+                "default": "America/Chicago"
+            },
+            {
+                "name": "WEBPASSWORD",
+                "label": "WEBPASSWORD",
+                "description": "set a secure password here or it will be random",
+                "default": "MySuperSecretAndSecureP@ssw0rd"
+            }
+        ]
     }
 ]
