@@ -318,7 +318,7 @@
         "restart_policy": "unless-stopped",
         "ports": [
             {
-                "DB": "8080:8080/tcp"
+                "DB": "5432:5432/tcp"
             }
         ],
         "env": [
