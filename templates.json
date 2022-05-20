@@ -140,21 +140,9 @@
         "volumes": [
             {
                 "container": "/var/jenkins_home",
-                "bind": "!data/jenkins_home"
+                "bind": "jenkins_home"
             }
-        ],
-        "env": [
-            {
-                "name": "PUID",
-                "label": "PUID",
-                "default": "!PUID"
-            },
-            {
-                "name": "PGID",
-                "label": "PGID",
-                "default": "!PGID"
-            }
-          ]
+        ]
     },
     {
         "type": 1,
@@ -301,12 +289,12 @@
             {
                 "name": "PUID",
                 "label": "PUID",
-                "default": "!PUID"
+                "default": "1000"
             },
             {
                 "name": "PGID",
                 "label": "PGID",
-                "default": "!PGID"
+                "default": "1000"
             },
             {
                 "name": "TZ",
