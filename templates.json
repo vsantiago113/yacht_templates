@@ -210,30 +210,5 @@
                 "bind": "!data/docker_registry"
             }
         ]
-    },
-    {
-        "type": 1,
-        "title": "Ubuntu",
-        "name": "ubuntu",
-        "description": "Ubuntu is a Debian-based Linux operating system that runs from the desktop to the cloud, to all your internet connected things.",
-        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/ubuntu_logo.png",
-        "image": "ubuntu:latest",
-        "categories": [
-            "OS",
-            "Linux"
-        ],
-        "platform": "linux",
-        "restart_policy": "unless-stopped",
-        "ports": [
-            {
-                "Registry": ":22/tcp"
-            }
-        ],
-        "volumes": [
-            {
-                "container": "/data",
-                "bind": "ubuntu"
-            }
-        ]
     }
 ]
