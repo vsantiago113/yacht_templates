@@ -303,5 +303,49 @@
                 "default": "America/Chicago"
             }
           ]
+    },
+    {
+        "type": 1,
+        "title": "PostgreSQL",
+        "name": "postgres",
+        "description": "PostgreSQL, often simply \"Postgres\", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/postgres_logo.png",
+        "image": "postgres",
+        "categories": [
+            "Database"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "DB": "8080:8080/tcp"
+            }
+        ],
+        "env": [
+            {
+                "name": "POSTGRES_USER",
+                "label": "POSTGRES_USER",
+                "description": "This optional environment variable is used in conjunction with POSTGRES_PASSWORD to set a user and its password.",
+                "default": "postgres"
+            },
+            {
+                "name": "POSTGRES_PASSWORD",
+                "label": "POSTGRES_PASSWORD",
+                "description": "This environment variable is required for you to use the PostgreSQL image. It must not be empty or undefined. This environment variable sets the superuser password for PostgreSQL.",
+                "default": "MySuperSecretAndSecureP@ssw0rd"
+            },
+            {
+                "name": "POSTGRES_DB",
+                "label": "POSTGRES_DB",
+                "description": "This optional environment variable can be used to define a different name for the default database that is created when the image is first started.",
+                "default": "postgres"
+            }
+          ],
+        "volumes": [
+            {
+                "container": "/var/lib/postgresql/data",
+                "bind": "!data/postgresql"
+            }
+        ]
     }
 ]
