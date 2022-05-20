@@ -186,5 +186,54 @@
                 "default": "gitlab_rails['gitlab_shell_ssh_port'] = 2224"
             }
         ]
+    },
+    {
+        "type": 1,
+        "title": "Docker Registry",
+        "name": "docker_registry",
+        "description": "The Registry is a stateless, highly scalable server side application that stores and lets you distribute Docker images. The Registry is open-source, under the permissive Apache license.",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/docker_registry_logo.png",
+        "image": "registry:2",
+        "categories": [
+            "Registry"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "Registry": "5000:5000/tcp"
+            }
+        ],
+        "volumes": [
+            {
+                "container": "/var/lib/registry",
+                "bind": "!data/docker_registry"
+            }
+        ]
+    },
+    {
+        "type": 1,
+        "title": "Ubuntu",
+        "name": "ubuntu",
+        "description": "Ubuntu is a Debian-based Linux operating system that runs from the desktop to the cloud, to all your internet connected things.",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/ubuntu_logo.png",
+        "image": "ubuntu:latest",
+        "categories": [
+            "OS",
+            "Linux"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "Registry": ":22/tcp"
+            }
+        ],
+        "volumes": [
+            {
+                "container": "/data",
+                "bind": "ubuntu"
+            }
+        ]
     }
 ]

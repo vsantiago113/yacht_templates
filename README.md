@@ -14,3 +14,8 @@ Yacht templates of containers I use for IT Automation development, and testing.
 * name: Gitlab
     * Docker Hub: https://hub.docker.com/r/gitlab/gitlab-ce/
     * Note: To get the initial password login in the container and run the command "gitlab | grep 'Password:' /etc/gitlab/initial_root_password"
+* Docker Registry
+    * Official Website: https://docs.docker.com/registry/
+    * Docker Hub: https://hub.docker.com/_/registry
+* Ubuntu
+    * Docker Hub: https://hub.docker.com/_/ubuntu
