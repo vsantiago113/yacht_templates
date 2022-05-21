@@ -26,5 +26,7 @@ Yacht templates of containers I use for IT Automation development, and testing.
     * Docker Hub: https://hub.docker.com/r/linuxserver/heimdall/
 * PostgreSQL
     * Docker Hub: https://hub.docker.com/_/postgres
+* pgAdmin4
+    * Docker Hub: https://hub.docker.com/r/dpage/pgadmin4/#!
 * Guacamole
     * Docker Hub: https://hub.docker.com/r/guacamole/guacamole/

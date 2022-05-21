@@ -100,8 +100,8 @@
         "restart_policy": "unless-stopped",
         "ports": [
             {
-                "WebUI-HTTP": "8000:8000/tcp",
-                "WebUI-HTTPS": "9443:9443/tcp"
+                "WebUI": "8000:8000/tcp",
+                "HTTPS WebUI": "9443:9443/tcp"
             }
         ],
         "volumes": [
@@ -159,8 +159,8 @@
         "restart_policy": "unless-stopped",
         "ports": [
             {
-                "WebUI-HTTP": "8880:80/tcp",
-                "WebUI-HTTPS": "4443:443/tcp",
+                "WebUI": "8880:80/tcp",
+                "HTTPS WebUI": "4443:443/tcp",
                 "SSH": "2224:22/tcp"
             }
         ],
@@ -227,8 +227,8 @@
         "restart_policy": "unless-stopped",
         "ports": [
             {
-                "DNS-TCP": "53:53/tcp",
-                "DNS-UDP": "53:53/udp",
+                "DNS TCP": "53:53/tcp",
+                "DNS UDP": "53:53/udp",
                 "DHCP": "67:67/udp",
                 "WebUI": ":80/tcp"
             }
@@ -257,7 +257,7 @@
                 "name": "WEBPASSWORD",
                 "label": "WEBPASSWORD",
                 "description": "set a secure password here or it will be random",
-                "default": "MySuperSecretAndSecureP@ssw0rd"
+                "default": "P@$$w0rd"
             }
         ]
     },
@@ -275,8 +275,8 @@
         "restart_policy": "unless-stopped",
         "ports": [
             {
-                "WebUI-HTTP": "80:80/tcp",
-                "WebUI-HTTPS": "443:443/tcp"
+                "WebUI": "80:80/tcp",
+                "HTTPS WebUI": "443:443/tcp"
             }
         ],
         "volumes": [
@@ -318,7 +318,7 @@
         "restart_policy": "unless-stopped",
         "ports": [
             {
-                "DB": "5432:5432/tcp"
+                "Database": "5432:5432/tcp"
             }
         ],
         "env": [
@@ -332,7 +332,7 @@
                 "name": "POSTGRES_PASSWORD",
                 "label": "POSTGRES_PASSWORD",
                 "description": "This environment variable is required for you to use the PostgreSQL image. It must not be empty or undefined. This environment variable sets the superuser password for PostgreSQL.",
-                "default": "MySuperSecretAndSecureP@ssw0rd"
+                "default": "P@$$w0rd"
             },
             {
                 "name": "POSTGRES_DB",
@@ -345,6 +345,45 @@
             {
                 "container": "/var/lib/postgresql/data",
                 "bind": "!data/postgresql"
+            }
+        ]
+    },
+    {
+        "type": 1,
+        "title": "pgAdmin 4",
+        "name": "pgadmin",
+        "description": "pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world.",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/pgadmin4-logo.png",
+        "image": "",
+        "categories": [
+            "Administration",
+            "Development Platform"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "WebUI": ":80/tcp"
+            }
+        ],
+        "env": [
+            {
+                "name": "PGADMIN_DEFAULT_EMAIL",
+                "label": "PGADMIN_DEFAULT_EMAIL",
+                "description": "This is the email address used when setting up the initial administrator account to login to pgAdmin. This variable is required and must be set at launch time.",
+                "default": "pgadmin@homelab.local"
+            },
+            {
+                "name": "PGADMIN_DEFAULT_PASSWORD",
+                "label": "PGADMIN_DEFAULT_PASSWORD",
+                "description": "This is the password used when setting up the initial administrator account to login to pgAdmin. This variable is required and must be set at launch time.",
+                "default": "P@$$w0rd"
+            }
+          ],
+          "volumes": [
+            {
+                "container": "/var/lib/pgadmin",
+                "bind": "!data/pgadmin"
             }
         ]
     }
