@@ -383,7 +383,7 @@
           "volumes": [
             {
                 "container": "/var/lib/pgadmin",
-                "bind": "!data/pgadmin"
+                "bind": "pgadmin"
             }
         ]
     }
