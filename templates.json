@@ -354,7 +354,7 @@
         "name": "pgadmin",
         "description": "pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world.",
         "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/pgadmin4-logo.png",
-        "image": "",
+        "image": "dpage/pgadmin4",
         "categories": [
             "Administration",
             "Development Platform"
