@@ -371,7 +371,7 @@
                 "name": "PGADMIN_DEFAULT_EMAIL",
                 "label": "PGADMIN_DEFAULT_EMAIL",
                 "description": "This is the email address used when setting up the initial administrator account to login to pgAdmin. This variable is required and must be set at launch time.",
-                "default": "pgadmin@homelab.local"
+                "default": "pgadmin@example.com"
             },
             {
                 "name": "PGADMIN_DEFAULT_PASSWORD",
@@ -384,6 +384,24 @@
             {
                 "container": "/var/lib/pgadmin",
                 "bind": "pgadmin"
+            }
+        ]
+    },
+    {
+        "type": 1,
+        "title": "DVWA",
+        "name": "dvwa",
+        "description": "Damn Vulnerable Web App (DVWA) is a PHP/MySQL web application that is damn vulnerable. Its main goals are to be an aid for security professionals to test their skills and tools in a legal environment, help web developers better understand the processes of securing web applications and aid teachers/students to teach/learn web application security in a class room environment.",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/dvwa-logo.png",
+        "image": "vulnerables/web-dvwa",
+        "categories": [
+            "Cybersecurity"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "WebUI": ":80/tcp"
             }
         ]
     }

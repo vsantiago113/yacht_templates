@@ -28,5 +28,7 @@ Yacht templates of containers I use for IT Automation development, and testing.
     * Docker Hub: https://hub.docker.com/_/postgres
 * pgAdmin4
     * Docker Hub: https://hub.docker.com/r/dpage/pgadmin4/#!
+* Damn Vulnerable Web Application (DVWA)
+    * Docker Hub: https://hub.docker.com/r/vulnerables/web-dvwa
 * Guacamole
     * Docker Hub: https://hub.docker.com/r/guacamole/guacamole/
