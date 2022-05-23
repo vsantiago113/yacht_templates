@@ -404,5 +404,24 @@
                 "WebUI": ":80/tcp"
             }
         ]
+    },
+    {
+        "type": 1,
+        "title": "CoreDNS",
+        "name": "coredns",
+        "description": "CoreDNS is a DNS server. It is written in Go. It can be used in a multitude of environments because of its flexibility.",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/coredns-logo.png",
+        "image": "coredns/coredns",
+        "categories": [
+            "DNS"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "DNS TCP": "53:53/tcp",
+                "DNS UDP": "53:53/udp"
+            }
+        ]
     }
 ]

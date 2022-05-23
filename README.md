@@ -30,5 +30,8 @@ Yacht templates of containers I use for IT Automation development, and testing.
     * Docker Hub: https://hub.docker.com/r/dpage/pgadmin4/#!
 * Damn Vulnerable Web Application (DVWA)
     * Docker Hub: https://hub.docker.com/r/vulnerables/web-dvwa
+* CoreDNS
+    * Official Website: https://coredns.io/
+    * Docker Hub: https://hub.docker.com/r/coredns/coredns/
 * Guacamole
     * Docker Hub: https://hub.docker.com/r/guacamole/guacamole/
