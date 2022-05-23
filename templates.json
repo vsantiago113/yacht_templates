@@ -428,6 +428,9 @@
                 "container": "/root/",
                 "bind": "!config/coredns/"
             }
+        ],
+        "command": [
+            "-conf=/root/Corefile"
         ]
     }
 ]
