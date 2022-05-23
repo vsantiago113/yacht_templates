@@ -18,8 +18,8 @@
         ],
         "volumes": [
             {
-                "container": "/config",
-                "bind": "!config/vault"
+                "container": "/config/",
+                "bind": "!config/vault/"
             }
         ],
         "cap_add": [
@@ -59,16 +59,16 @@
         ],
         "volumes": [
             {
-                "container": "/vault/config",
-                "bind": "!config/vault/config"
+                "container": "/vault/config/",
+                "bind": "!config/vault/config/"
             },
             {
-                "container": "/vault/file",
-                "bind": "!data/vault/file"
+                "container": "/vault/file/",
+                "bind": "!data/vault/file/"
             },
             {
-                "container": "/vault/logs",
-                "bind": "!logs/vault/logs"
+                "container": "/vault/logs/",
+                "bind": "!logs/vault/logs/"
             }
         ],
         "cap_add": [
@@ -110,8 +110,8 @@
                 "bind": "/var/run/docker.sock"
             },
             {
-                "container": "/data",
-                "bind": "!data/portainer/data"
+                "container": "/data/",
+                "bind": "!data/portainer/data/"
             }
         ],
         "cap_add": [
@@ -139,8 +139,8 @@
         ],
         "volumes": [
             {
-                "container": "/var/jenkins_home",
-                "bind": "jenkins_home"
+                "container": "/var/jenkins_home/",
+                "bind": "jenkins_home/"
             }
         ]
     },
@@ -166,16 +166,16 @@
         ],
         "volumes": [
             {
-                "container": "/etc/gitlab",
-                "bind": "!config/gitlab/config"
+                "container": "/etc/gitlab/",
+                "bind": "!config/gitlab/config/"
             },
             {
-                "container": "/var/log/gitlab",
-                "bind": "!logs/gitlab/logs"
+                "container": "/var/log/gitlab/",
+                "bind": "!logs/gitlab/logs/"
             },
             {
-                "container": "/var/opt/gitlab",
-                "bind": "!data/gitlab/data"
+                "container": "/var/opt/gitlab/",
+                "bind": "!data/gitlab/data/"
             }
         ],
         "env": [
@@ -206,8 +206,8 @@
         ],
         "volumes": [
             {
-                "container": "/var/lib/registry",
-                "bind": "!data/docker_registry"
+                "container": "/var/lib/registry/",
+                "bind": "!data/docker_registry/"
             }
         ]
     },
@@ -235,8 +235,8 @@
         ],
         "volumes": [
             {
-                "container": "/etc/pihole",
-                "bind": "!config/pihole/etc-pihole"
+                "container": "/etc/pihole/",
+                "bind": "!config/pihole/etc-pihole/"
             },
             {
                 "container": "/etc/dnsmasq.d",
@@ -281,8 +281,8 @@
         ],
         "volumes": [
             {
-                "container": "/config",
-                "bind": "!config/heimdall"
+                "container": "/config/",
+                "bind": "!config/heimdall/"
             }
         ],
         "env": [
@@ -343,8 +343,8 @@
           ],
         "volumes": [
             {
-                "container": "/var/lib/postgresql/data",
-                "bind": "!data/postgresql"
+                "container": "/var/lib/postgresql/data/",
+                "bind": "!data/postgresql/"
             }
         ]
     },
@@ -382,8 +382,8 @@
           ],
           "volumes": [
             {
-                "container": "/var/lib/pgadmin",
-                "bind": "pgadmin"
+                "container": "/var/lib/pgadmin/",
+                "bind": "pgadmin/"
             }
         ]
     },
@@ -425,8 +425,8 @@
         ],
         "volumes": [
             {
-                "container": "/etc/coredns",
-                "bind": "!config/coredns"
+                "container": "/root/",
+                "bind": "!config/coredns/"
             }
         ]
     }
