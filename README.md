@@ -33,5 +33,7 @@ Yacht templates of containers I use for IT Automation development, and testing.
 * CoreDNS
     * Official Website: https://coredns.io/
     * Docker Hub: https://hub.docker.com/r/coredns/coredns/
+* NGINX
+    * Docker Hub: https://hub.docker.com/_/nginx/
 * Guacamole
     * Docker Hub: https://hub.docker.com/r/guacamole/guacamole/

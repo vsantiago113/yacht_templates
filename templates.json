@@ -432,5 +432,30 @@
         "command": [
             "-conf=/root/Corefile"
         ]
+    },
+    {
+        "type": 1,
+        "title": "NGINX",
+        "name": "nginx",
+        "description": "nginx [engine x] is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server, originally written by Igor Sysoev.",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/nginx-logo.png",
+        "image": "nginx",
+        "categories": [
+            "Proxy",
+            "Load Balancer"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "DNS TCP": "80:80/tcp"
+            }
+        ],
+        "volumes": [
+            {
+                "container": "/etc/nginx/nginx.conf",
+                "bind": "!config/nginx/nginx.conf"
+            }
+        ]
     }
 ]
