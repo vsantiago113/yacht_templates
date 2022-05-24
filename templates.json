@@ -448,7 +448,7 @@
         "restart_policy": "unless-stopped",
         "ports": [
             {
-                "DNS TCP": "80:80/tcp"
+                "HTTP": "80:80/tcp"
             }
         ],
         "volumes": [
