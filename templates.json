@@ -5,7 +5,7 @@
         "name": "dev-vault",
         "description": "Manage secrets and protect sensitive data. Create and secure access to tokens, passwords, certificates, and encryption keys.",
         "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/vault-logo.png",
-        "image": "vault",
+        "image": "vault:latest",
         "categories": [
             "Secrets Manager"
         ],
@@ -46,7 +46,7 @@
         "name": "vault",
         "description": "Manage secrets and protect sensitive data. Create and secure access to tokens, passwords, certificates, and encryption keys.",
         "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/vault-logo.png",
-        "image": "vault",
+        "image": "vault:latest",
         "categories": [
             "Secrets Manager"
         ],
@@ -166,16 +166,16 @@
         ],
         "volumes": [
             {
-                "container": "/etc/gitlab",
-                "bind": "!config/gitlab/config"
+                "container": "/etc/gitlab:Z",
+                "bind": "!config/gitlab/config:Z"
             },
             {
-                "container": "/var/log/gitlab",
-                "bind": "!logs/gitlab/logs"
+                "container": "/var/log/gitlab:Z",
+                "bind": "!logs/gitlab/logs:Z"
             },
             {
-                "container": "/var/opt/gitlab",
-                "bind": "!data/gitlab/data"
+                "container": "/var/opt/gitlab:Z",
+                "bind": "!data/gitlab/data:Z"
             }
         ],
         "env": [
@@ -215,7 +215,7 @@
         "type": 1,
         "title": "Pi-hole",
         "name": "pihole",
-        "description": "",
+        "description": "Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server, intended for use on a private network. It is designed for low-power embedded devices with network capability, such as the Raspberry Pi, but supports any Linux machines.",
         "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/pihole-logo.png",
         "image": "pihole/pihole:latest",
         "categories": [
@@ -310,7 +310,7 @@
         "name": "postgres",
         "description": "PostgreSQL, often simply \"Postgres\", is an object-relational database management system (ORDBMS) with an emphasis on extensibility and standards-compliance.",
         "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/postgres_logo.png",
-        "image": "postgres",
+        "image": "postgres:latest",
         "categories": [
             "Database"
         ],
@@ -354,7 +354,7 @@
         "name": "pgadmin",
         "description": "pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world.",
         "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/pgadmin4-logo.png",
-        "image": "dpage/pgadmin4",
+        "image": "dpage/pgadmin4:latest",
         "categories": [
             "Administration",
             "Development Platform"
@@ -393,7 +393,7 @@
         "name": "dvwa",
         "description": "Damn Vulnerable Web App (DVWA) is a PHP/MySQL web application that is damn vulnerable. Its main goals are to be an aid for security professionals to test their skills and tools in a legal environment, help web developers better understand the processes of securing web applications and aid teachers/students to teach/learn web application security in a class room environment.",
         "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/dvwa-logo.png",
-        "image": "vulnerables/web-dvwa",
+        "image": "vulnerables/web-dvwa:latest",
         "categories": [
             "Cybersecurity"
         ],
@@ -411,7 +411,7 @@
         "name": "coredns",
         "description": "CoreDNS is a DNS server. It is written in Go. It can be used in a multitude of environments because of its flexibility.",
         "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/coredns-logo.png",
-        "image": "coredns/coredns",
+        "image": "coredns/coredns:latest",
         "categories": [
             "DNS"
         ],
@@ -463,5 +463,51 @@
                 "bind": "!data/nginx"
             }
         ]
+    },
+    {
+        "type": 1,
+        "title": "NGINX Proxy Manager",
+        "name": "nginx-proxy-manager",
+        "description": "",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/nginx_proxy_manager-logo.png",
+        "image": "jc21/nginx-proxy-manager:latest",
+        "categories": [
+            "Proxy",
+            "Load Balancer",
+            "Reverse Proxy"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "HTTP": "80:80/tcp",
+                "WebUI": "81:81/tcp",
+                "HTTPS": "443:443/tcp"
+            }
+        ],
+        "volumes": [
+            {
+                "container": "/data",
+                "bind": "!data/nginx_proxy_manager"
+            },
+            {
+                "container": "/etc/letsencrypt",
+                "bind": "!data/letsencrypt"
+            }
+        ],
+        "env": [
+            {
+                "name": "DB_SQLITE_FILE",
+                "label": "DB_SQLITE_FILE",
+                "description": "Change the location of the SQLite DB file within the container.",
+                "default": "/data/database.sqlite"
+            },
+            {
+                "name": "DISABLE_IPV6",
+                "label": "DISABLE_IPV6",
+                "description": "Disable IPv6 if IPv6 is not enabled on your host.",
+                "default": "true"
+            }
+          ]
     }
 ]

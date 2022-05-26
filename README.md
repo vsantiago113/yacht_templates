@@ -1,6 +1,23 @@
 # yacht_templates
 Yacht templates of containers I use for IT Automation development, and testing.
 
+## What port each service run on?
+* Jenkins = 8080/tcp, 50000/tcp
+* Guacamole = 8080/tcp
+* Damn Vulnerable Web Application (DVWA) = 80/tcp
+* Gitlab = 80/tcp, 443/tcp, 22/tcp
+* pgAdmin4 = 80/tcp
+* NGINX = 80/tcp, 443/tcp
+* NGNIX Proxy Manager = 80/tcp, 443/tcp, 81/tcp
+* HEIMDALL = 80/tcp, 443/tcp
+* Pi-hole = 53/tcp, 53/udp, 67/udp, 80/tcp
+* CoreDNS = 53/tcp, 53/udp
+* Portainer = 8000/tcp, 9443/tcp
+* Yacht = 8000/tcp
+* Docker Registry = 5000/tcp
+* PostgreSQL = 5432/tcp
+* Vault = 8200/tcp
+
 ## Templates:
 * name: Vault - Development mode
     * Docker Hub: https://hub.docker.com/_/vault
@@ -35,5 +52,8 @@ Yacht templates of containers I use for IT Automation development, and testing.
     * Docker Hub: https://hub.docker.com/r/coredns/coredns/
 * NGINX
     * Docker Hub: https://hub.docker.com/_/nginx/
-* Guacamole
-    * Docker Hub: https://hub.docker.com/r/guacamole/guacamole/
+* NGNIX Proxy Manager
+    * Official Website: https://nginxproxymanager.com/
+    * Docker Hub: https://hub.docker.com/r/jc21/nginx-proxy-manager/
+    * Default Username and Password: admin@example.com, changeme
+
