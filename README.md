@@ -56,4 +56,6 @@ Yacht templates of containers I use for IT Automation development, and testing.
     * Official Website: https://nginxproxymanager.com/
     * Docker Hub: https://hub.docker.com/r/jc21/nginx-proxy-manager/
     * Default Username and Password: admin@example.com, changeme
-
+* Nextcloud
+    * Docker Hub: https://hub.docker.com/_/nextcloud/
+    * Official Website: https://nextcloud.com/

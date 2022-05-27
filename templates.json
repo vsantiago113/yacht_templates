@@ -166,16 +166,16 @@
         ],
         "volumes": [
             {
-                "container": "/etc/gitlab:Z",
-                "bind": "!config/gitlab/config:Z"
+                "container": "/etc/gitlab",
+                "bind": "!config/gitlab/config"
             },
             {
-                "container": "/var/log/gitlab:Z",
-                "bind": "!logs/gitlab/logs:Z"
+                "container": "/var/log/gitlab",
+                "bind": "!logs/gitlab/logs"
             },
             {
-                "container": "/var/opt/gitlab:Z",
-                "bind": "!data/gitlab/data:Z"
+                "container": "/var/opt/gitlab",
+                "bind": "!data/gitlab/data"
             }
         ],
         "env": [
@@ -509,5 +509,23 @@
                 "default": "true"
             }
           ]
+    },
+    {
+        "type": 1,
+        "title": "Nextcloud",
+        "name": "nextcloud",
+        "description": "Nextcloud is a suite of client-server software for creating and using file hosting services. It is enterprise-ready with comprehensive support options. Being free and open-source software, anyone is allowed to install and operate it on their own private server devices.",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/nextcloud-logo.svg",
+        "image": "nextcloud:latest",
+        "categories": [
+            "Productivity"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+            {
+                "HTTP": ":80/tcp"
+            }
+        ]
     }
 ]
