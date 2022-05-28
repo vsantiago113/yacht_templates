@@ -59,3 +59,5 @@ Yacht templates of containers I use for IT Automation development, and testing.
 * Nextcloud
     * Docker Hub: https://hub.docker.com/_/nextcloud/
     * Official Website: https://nextcloud.com/
+* Code-Server
+    * Docker Hub: https://hub.docker.com/r/linuxserver/code-server
