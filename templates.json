@@ -289,12 +289,12 @@
             {
                 "name": "PUID",
                 "label": "PUID",
-                "default": "1000"
+                "default": "!PUID"
             },
             {
                 "name": "PGID",
                 "label": "PGID",
-                "default": "1000"
+                "default": "!PGID"
             },
             {
                 "name": "TZ",
@@ -554,8 +554,8 @@
           },
           {
             "name": "GUID",
-            "label": "PUID",
-            "default": "!PUID"
+            "label": "PGID",
+            "default": "!PGID"
           },
           {
             "name": "TZ",
@@ -621,7 +621,7 @@
                 "bind": "!data/filebrowser/srv"
             },
             {
-                "container": "/srv",
+                "container": "/database/filebrowser.db",
                 "bind": "!data/filebrowser/database/filebrowser.db"
             }
           ],
@@ -633,8 +633,8 @@
             },
             {
                 "name": "GUID",
-                "label": "PUID",
-                "default": "!PUID"
+                "label": "PGID",
+                "default": "!PGID"
             }
         ]
     }
