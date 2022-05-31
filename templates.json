@@ -596,5 +596,46 @@
             "bind": "!config/Code-Server"
           }
         ]
+    },
+    {
+        "type": 1,
+        "title": "File Browser",
+        "name": "filebrowser",
+        "description": "FileBrowser is a free, open-source, self-hosted web application for managing files and folders.",
+        "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/file_browser-logo.png",
+        "image": "filebrowser/filebrowser:s6",
+        "categories": [
+          "File Utility",
+          "Administration Tool"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+          {
+            "WebUI": "8002:80/tcp"
+          }
+        ],
+        "volumes": [
+            {
+                "container": "/srv",
+                "bind": "!data/filebrowser/srv"
+            },
+            {
+                "container": "/srv",
+                "bind": "!data/filebrowser/database/filebrowser.db"
+            }
+          ],
+        "env": [
+            {
+                "name": "PUID",
+                "label": "PUID",
+                "default": "!PUID"
+            },
+            {
+                "name": "GUID",
+                "label": "PUID",
+                "default": "!PUID"
+            }
+        ]
     }
 ]

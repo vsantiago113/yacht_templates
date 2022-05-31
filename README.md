@@ -61,3 +61,7 @@ Yacht templates of containers I use for IT Automation development, and testing.
     * Official Website: https://nextcloud.com/
 * Code-Server
     * Docker Hub: https://hub.docker.com/r/linuxserver/code-server
+* File Browser
+    * Docker Hub: https://hub.docker.com/r/filebrowser/filebrowser
+    * Official Website: https://filebrowser.org/
+    * GitHub: https://github.com/filebrowser/filebrowser
