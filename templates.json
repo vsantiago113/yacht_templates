@@ -602,7 +602,7 @@
         "title": "File Browser",
         "name": "filebrowser",
         "description": "FileBrowser is a free, open-source, self-hosted web application for managing files and folders.",
-        "logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/file_browser-logo.png",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/file_browser-logo.png",
         "image": "filebrowser/filebrowser:s6",
         "categories": [
           "File Utility",
