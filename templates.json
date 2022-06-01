@@ -621,8 +621,8 @@
                 "bind": "!data/filebrowser/srv"
             },
             {
-                "container": "/database/filebrowser.db",
-                "bind": "!data/filebrowser/database/filebrowser.db"
+                "container": "/myfiles",
+                "bind": "!config"
             }
           ],
         "env": [
