@@ -621,6 +621,14 @@
                 "bind": "FileBrowser"
             },
             {
+                "container": "/srv",
+                "bind": "FileBrowser"
+            },
+            {
+                "container": "/database",
+                "bind": "FileBrowser"
+            },
+            {
                 "container": "/myfiles",
                 "bind": "!config"
             }
