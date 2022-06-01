@@ -618,15 +618,15 @@
         "volumes": [
             {
                 "container": "/config",
-                "bind": "FileBrowser"
+                "bind": "FileBrowser_Config"
             },
             {
                 "container": "/srv",
-                "bind": "FileBrowser"
+                "bind": "FileBrowser_Srv"
             },
             {
                 "container": "/database",
-                "bind": "FileBrowser"
+                "bind": "FileBrowser_Database"
             },
             {
                 "container": "/myfiles",
