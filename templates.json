@@ -618,7 +618,7 @@
         "volumes": [
             {
                 "container": "/srv",
-                "bind": "!data/filebrowser/srv"
+                "bind": "!config/FileBrowser"
             },
             {
                 "container": "/myfiles",
