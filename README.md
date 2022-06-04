@@ -65,3 +65,8 @@ Yacht templates of containers I use for IT Automation development, and testing.
     * Docker Hub: https://hub.docker.com/r/filebrowser/filebrowser
     * Official Website: https://filebrowser.org/
     * GitHub: https://github.com/filebrowser/filebrowser
+* Joplin
+    * Official Website: https://joplinapp.org/
+    * Docker Hub: https://hub.docker.com/r/joplin/server
+    * GitHub: https://github.com/laurent22/joplin
+        * https://joplinapp.org/markdown/

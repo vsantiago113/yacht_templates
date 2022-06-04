@@ -645,5 +645,24 @@
                 "default": "!PGID"
             }
         ]
+    },
+    {
+        "type": 1,
+        "title": "Joplin",
+        "name": "joplin",
+        "description": "Joplin is an open source note-taking app. Capture your thoughts and securely access them from any device.",
+        "logo": "https://raw.githubusercontent.com/vsantiago113/yacht_templates/main/logos/joplin-logo.png",
+        "image": "joplin/server:latest",
+        "categories": [
+          "Productivity",
+          "Notes"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+          {
+            "WebUI": "22300:22300/tcp"
+          }
+        ]
     }
 ]
